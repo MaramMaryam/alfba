@@ -5,11 +5,11 @@
   "repository": "git@github.com:MaramMaryam/alfba.git",
   "license": "MIT",
   "scripts": {
-    "build-css": "tailwindcss build ./src/input.css -o build/styles.css",
-    "watch-css": "tailwindcss build ./src/styles.css -o build/styles.csss --watch",
-    "serve": "cross-env NODE_ENV=development concurrently \"postcss src/styles.css -o build/styles.css --watch\"  \"live-server ./src\"",
-    "development": "cross-env NODE_ENV=development postcss src/styles.css -o build/styles.css",
-    "production": "cross-env NODE_ENV=production postcss src/styles.css -o build/styles.css"
+    "build-css": "tailwindcss build ./src/styles.scss -o build/styles.css",
+    "watch-css": "tailwindcss build ./src/styles.scss -o build/styles.csss --watch",
+    "serve": "cross-env NODE_ENV=development concurrently \"postcss src/styles.scss -o build/styles.css --watch\"  \"live-server ./src\"",
+    "development": "cross-env NODE_ENV=development postcss src/styles.scss -o build/styles.css",
+    "production": "cross-env NODE_ENV=production postcss src/styles.scss -o build/styles.css"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
