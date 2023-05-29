@@ -4,9 +4,24 @@
   "main": "index.js",
   "repository": "git@github.com:MaramMaryam/alfba.git",
   "license": "MIT",
+  "scripts": {
+    "build-css": "tailwindcss build ./src/input.css -o build/styles.css",
+    "watch-css": "tailwindcss build ./src/styles.css -o build/styles.csss --watch",
+    "serve": "cross-env NODE_ENV=development concurrently \"postcss src/styles.css -o build/styles.css --watch\"  \"live-server ./src\"",
+    "development": "cross-env NODE_ENV=development postcss src/styles.css -o build/styles.css",
+    "production": "cross-env NODE_ENV=production postcss src/styles.css -o build/styles.css"
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
+    "concurrently": "^8.0.1",
+    "cross-env": "^7.0.3",
+    "live-server": "^1.2.2",
+    "node-sass": "^9.0.0",
     "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0",
     "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "flowbite": "^1.6.5"
   }
 }
